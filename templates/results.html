@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="icon" href="../static/img/favicon.ico">
+    <title>Art Saucing - Results</title>
+</head>
+
+<body>
+    <a href="/"><img class="logo" src="../static/img/logo.png" /></a>
+    <div class="containter">
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+    </div>
+    <div class="cardbackground">
+        <div class="floor">Floor Price: ◎ {{floorprice}}</div>
+        <div class="card">
+            {% for i in items %}
+            <div class=”item” style="width: 20rem; display: block; margin-left: auto;margin-right: auto; background-color: white; box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);border-radius: 10px;-webkit-touch-callout: none; /* iOS Safari */-webkit-user-select: none; /* Safari */-khtml-user-select: none; /* Konqueror HTML */-moz-user-select: none; /* Old versions of Firefox */-ms-user-select: none; /* Internet Explorer/Edge */user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */">
+                <a href={{i[1][1][0]}}>
+                    <img src={{i[1][1][1]}} style="width: 20rem;display: block; margin-left: auto;margin-right: auto; border-radius: 10px 10px 0px 0px; min-height: 20rem; object-fit: cover; ">
+                    <div class=”caption” style="height: 5rem; position: relative; margin: 1rem 1rem 0rem 1rem;">
+                        <div id="name">{{i[0]}}</div>
+                        <div id="price" style="text-align:right;">◎ {{i[1][0]}}</div>
+                        <div id="rank">Rank: {{i[1][2]}}</div>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="disclaimer">Disclaimer: Nothing on this site constitutes financial advice.</div>
+</body>
+
+</html>

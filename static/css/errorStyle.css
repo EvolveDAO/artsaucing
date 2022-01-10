@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to right top, #ffffa1, #fedf45);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    height: 50px;
+}
+
+.error {
+    position: absolute;
+    text-align: center;
+}
+
+.message {
+    font-family: helvetica, arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #ff4747;
+    letter-spacing: 0.2em;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.link {
+    font-family: helvetica, arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #ff4747;
+    letter-spacing: 0.2em;
+}
